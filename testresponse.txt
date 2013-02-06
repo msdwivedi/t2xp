@@ -1,4 +1,0 @@
-Array
-(
-    [transaction_token] => 58129ba60921e43e929d9f8504e7b716e353a1e1
-)
