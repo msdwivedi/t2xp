@@ -1,0 +1,117 @@
+<div class="indent1">
+				<h2 class="h2-bg1">Search Results</h2>
+				<div class="wrapper">
+					<article class="fullwidth">
+						<ul class="date-list">
+							{if $Has_Recentlypostedjobs}
+                            	{foreach from=$Search_Results_list item=eachjob}
+                            <li>
+								<a href="{$eachjob.joblink}">{$eachjob.jobtitle} <span style="font-size:11px; font-weight:normal; color:#333333; text-decoration:none">({$eachjob.desired_experience})</span></a> 
+                                <div>{$eachjob.company_name}</div>
+								<strong>{$eachjob.jobdesc}</strong>
+								<div>
+									<span class="text_1"><strong>Location:</strong> <span>{$eachjob.location}</span></span>
+                                    <span class="jobapply"> <span><a href="{$eachjob.applylink}">Apply this Job</a></span></span>
+                                    <span class="text_2"><strong>Posted on:</strong> <span>{$eachjob.postdate}</span></span>
+								</div>
+							</li>
+                            {/foreach}
+                            {else}
+                            <li>
+								No Jobs posted yet
+							</li>                            
+                            {/if}
+							
+						</ul>
+					</article>
+
+				</div>
+				<!--<div class="line-hor"><div class="alignright"><a href="#" class="link">view all posted jobs</a></div></div>-->
+				<h2 class="h2-bg3">Job Search Tools</h2>
+				<div class="container">
+					<article class="col-2 col-indent1 margin-left">
+						<ul class="list_1">
+							<li>
+								<img SRC="images/page1-img8.jpg" alt="" />
+								<a href="#">Distribute Your Resume</a>
+								<span>We can get your resume out 78% faster</span>
+							</li>
+							<li>
+								<img SRC="images/page1-img9.jpg" alt="" />
+								<a href="#">Free Resume Critique</a>
+								<span>Does your resume need to be improved?</span>
+							</li>
+						</ul>
+					</article>
+					<article class="col-2 col-indent2">
+						<ul class="list_1">
+							<li>
+								<img SRC="images/page1-img10.jpg" alt="" />
+								<a href="#">Free Career Quiz</a>
+								<span>What career is right for you?</span>
+							</li>
+							<li>
+								<img SRC="images/page1-img11.jpg" alt="" />
+								<a href="#">Free Salary Calculator</a>
+								<span>What career is right for you?</span>
+							</li>
+						</ul>
+					</article>
+					<article class="col-2">
+						<ul class="list_1">
+							<li>
+								<img SRC="images/page1-img12.jpg" alt="" />
+								<a href="#">Career Advice</a>
+								<span>What career is right for you?</span>
+							</li>
+							<li>
+								<img SRC="images/page1-img13.jpg" alt="" />
+								<a href="#">Free Career Quiz</a>
+								<span>What career is right for you?</span>
+							</li>
+						</ul>
+					</article>
+					<div class="clear"></div>
+				</div>
+				<div class="line-hor"><div class="alignright"><a href="#" class="link">more job search tools</a></div></div>
+				<h2 class="h2-bg4">Careers by Category</h2>
+				<div class="wrapper">
+					<article class="col-3 col-indent1">
+						<ul class="list">
+							<li><a href="#">Accounting</a></li>
+							<li><a href="#">Admin &amp; Clerical</a></li>
+							<li><a href="#">Contract &amp; Freelance</a></li>
+							<li><a href="#">Banking &amp; Finance</a></li>
+							<li><a href="#">Business Opportunities</a></li>
+						</ul>
+					</article>
+					<article class="col-3 col-indent1">
+						<ul class="list">
+							<li><a href="#">College &amp; Internships</a></li>
+							<li><a href="#">Customer Service</a></li>
+							<li><a href="#">Diversity Opportunities</a></li>
+							<li><a href="#">Engineering</a></li>
+							<li><a href="#">Executive</a></li>
+						</ul>
+					</article>
+					<article class="col-4 col-indent2">
+						<ul class="list">
+							<li><a href="#">Franchise</a></li>
+							<li><a href="#">Government</a></li>
+							<li><a href="#">Health Care</a></li>
+							<li><a href="#">Hospitality</a></li>
+							<li><a href="#">Human Resources</a></li>
+						</ul>
+					</article>
+					<article class="col-3">
+						<ul class="list">
+							<li><a href="#">Information Technology</a></li>
+							<li><a href="#">Manufacturing</a></li>
+							<li><a href="#">Nonprofit</a></li>
+							<li><a href="#">Part Time</a></li>
+							<li><a href="#">Retail</a></li>
+						</ul>
+					</article>
+				</div>
+				<div class="alignright"><a href="#" class="link">all categories</a></div>
+			</div>

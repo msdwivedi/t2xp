@@ -1,0 +1,478 @@
+<div class="indent1">
+</div>
+<h2 class="h2-bg3">Dashboard</h2>
+<style>
+div.bgtxtBox {
+    background: url("images/candidate_profile/txt-callout.gif") no-repeat scroll 0 0 transparent;
+    height: 28px;
+    padding: 6px 0 0 20px;
+    width: 196px;
+}
+.lt {
+    float: left;
+}
+body, p, div, form, input {
+    font-family: Verdana,Arial;
+    font-size: 11px;
+    margin: 0;
+}   
+body,p,div,form,input {margin:0px; font-family:Verdana,Arial; font-size:11px;}
+.mylnk{color:#1263C8; text-decoration:underline;}
+a.mylnk:hover{color:#1263C8; text-decoration:none;}
+.mylnk0{color:#1263C8; text-decoration:none;}
+a.mylnk0:hover{color:#1263C8; text-decoration:underline;}
+.mylnk11{color:#1CAED4; text-decoration:none;}
+.mylnk11:hover{color:#1CAED4; text-decoration:underline;}
+.mylnk12{color:#1CAED4; text-decoration:underline;}
+.mylnk12:hover{color:#1CAED4; text-decoration:none;}
+.mylnk2{color:#990003; text-decoration:underline;}
+.mylnk2:hover{color:#990003; text-decoration:none;}
+div.bgtxtBox{background:url("images/candidate_profile/txt-callout.gif") no-repeat; width:196px; height:28px; padding:6px 0px 0px 20px;}
+div.bgtxtBox input.inactive{color:#A2A2A2; border:0px; width:180px;}
+.bdr-bot2{border-bottom:solid 2px #CEE4EB; padding-bottom:10px;}
+table.nsw th{background-color:#F4F4F4; color:#5592AF; padding:5px 8px;}
+table.nsw td{color:#555; padding:10px 8px 5px 8px; border-bottom:solid 1px #F4F4F4;}
+.earn{background:url("images/candidate_profile/icon-dboard.gif") no-repeat 0px 0px; width:18px; height:19px;}
+.ibox{ background:url("images/candidate_profile/icon-dboard.gif") no-repeat -23px 0px; width:18px; height:19px;}
+.invtn{background:url("images/candidate_profile/icon-dboard.gif") no-repeat -46px 0px; width:18px; height:19px;}
+.conne{background:url("images/candidate_profile/icon-dboard.gif") no-repeat -69px 0px; width:18px; height:19px;}
+.jobapp{background:url("images/candidate_profile/icon-dboard.gif") no-repeat -92px 0px; width:18px; height:19px;}
+.rview{background:url("images/candidate_profile/icon-dboard.gif") no-repeat -115px 0px; width:18px; height:19px;}
+div.bginvite{background:url("images/candidate_profile/bginvite-contact.gif") no-repeat; width:192px; height:139px;}
+div.bgclickjobs{background:url("images/candidate_profile/bgclickjobs.gif") no-repeat; width:192px; height:139px;}
+div.bgsupport{background:url("images/candidate_profile/bgsupport.gif") no-repeat; width:192px; height:139px;}
+.hdr{font-family:Arial; font-size:20px; color:#555;}
+/* Chart */
+#chrt{margin:0px; text-align:left;}
+#chrt .chart {background:url("images/candidate_profile/chart.gif") no-repeat;}
+#chart .c25{width:37px; height:37px; background-position:0px 0px;}
+#chart .c30{width:37px; height:37px; background-position:-46px 0px;}
+#chart .c35{width:37px; height:37px; background-position:-92px 0px;}
+#chart .c40{width:37px; height:37px; background-position:-138px 0px;}
+#chart .c45{width:37px; height:37px; background-position:-184px 0px;}
+#chart .c50{width:37px; height:37px; background-position:-230px 0px;}
+#chart .c55{width:37px; height:37px; background-position:-276px 0px;}
+#chart .c60{width:37px; height:37px; background-position:-322px 0px;}
+#chart .c65{width:37px; height:37px; background-position:-368px 0px;}
+#chart .c70{width:37px; height:37px; background-position:-414px 0px;}
+#chart .c75{width:37px; height:37px; background-position:-460px 0px;}
+#chart .c80{width:37px; height:37px; background-position:-506px 0px;}
+#chart .c85{width:37px; height:37px; background-position:-552px 0px;}
+/* Dashboard */
+div.dboard-top{background:url("images/candidate_profile/dashboard-top.gif") no-repeat; width:242px; height:28px; font:bold 18px Arial; color:#990003; padding:12px 0px 0px 8px;}
+div.dboard-mid{border-left:solid 1px #DEDEDE; border-right:solid 1px #DEDEDE; border-bottom:solid 1px #DEDEDE; width:248px;}
+div.dboard-mid div.data{border-bottom:solid 1px #DEDEDE; padding:10px 0px 10px 8px;}
+div.dboard-mid a{font:bold 17px Arial; color:#1CAED4; text-decoration:none;}
+div.dboard-mid a:hover{font:bold 17px Arial; color:#1CAED4; text-decoration:underline;}
+div.hd{font:normal 18px Arial; color:#990003;}
+table.myresume th{color:#1CAED4; text-align:left; padding-bottom:10px; vertical-align:top;}
+table.myresume td{color:#555; text-align:left; padding-bottom:10px; vertical-align:top;}
+div.rpanel1{font:bold 13px 'Trebuchet MS'; color:#FFF; background:url("images/candidate_profile/btop1.gif") no-repeat; width:177px; height:31px; padding:5px 5px 0px 10px; cursor:pointer;}
+div.rpanel{font:bold 13px 'Trebuchet MS'; color:#FFF; background:url("images/candidate_profile/btop192.gif") no-repeat; width:177px; height:31px; padding:5px 5px 0px 10px; cursor:pointer;}
+div.rpanel-mid{border-left:solid 2px #DBECFD; border-right:solid 2px #DBECFD; vertical-align:top; padding:7px 10px 5px 10px;}
+/* B'Card */
+div.bc-top{background:url("images/candidate_profile/bc-top.gif"); width:272px; padding:20px 0px 0px 48px; color:#555;}
+div.bc-top span{font:bold 14px verdana; color:#990003;}
+div.bc-bot{background:url("images/candidate_profile/bc-bot.gif") no-repeat right; width:320px; height:47px;}
+div.bc-bot a{color:#FFF; text-decoration:underline;}
+div.bc-bot a:hover{color:#FFF; text-decoration:none;}
+.rt {
+    float: right;
+}
+.lt {
+    float: left;
+}
+    </style>	
+<table style="text-align:left; color:#555;" border="0" cellpadding="0" cellspacing="0" width="982">
+		<!-- Error -->
+				<tbody><tr>
+			<td style="border-bottom:dashed 1px #C6C6C6; padding-bottom:5px;">
+				<div class="lt">
+					<div id="chrt">
+						<div id="chart">
+							<div class="chart c60"></div>
+						</div>
+					</div>
+				</div>
+				<div class="lt" style="padding:5px 0px 5px 10px;"><h1 class="hdr">58% complete</h1></div>
+			</td>
+			<td colspan="3" style="border-bottom:dashed 1px #C6C6C6; padding-bottom:5px;" align="right">
+				<div class="lt" style="padding:15px 5px 0px 0px;"><a href="invitefriends.php"><strong>Invite friends to earn more!</strong></a></div>
+				<div class="rt" style="padding:5px 0px 0px 5px;"><span style="font:normal 20px Arial; color:#555;">Your Resume Price</span></div>
+				<div class="rt" style="background:url('images/candidate_profile/price-bg.gif') no-repeat; width:37px; height:28px; text-align:center; padding-top:10px; font-size:12px; color:#FFF;"><strong>80</strong></div>
+			</td>
+		</tr>
+		<tr>
+			<td style="padding:15px 20px 0px 0px;" valign="top" width="250">
+            <div class="dboard-top">Dashboard</div>
+            <div class="dboard-mid">
+			  <div class="data">
+			    <div class="ibox lt"></div>
+						<div class="lt" style="padding-left:9px; width:87%;">
+							<p style="padding-bottom:5px;"><strong>Inbox</strong></p>
+						  <a href="in-mails.php">0</a> new messages
+						</div>
+						<div class="clr"></div>
+			  </div>
+<div class="data" style="border-bottom:none;">
+					  <div class="rview lt"></div>
+						<div class="lt" style="padding-left:9px; width:87%;">
+							<p style="padding-bottom:5px;"><strong>Resume Views</strong></p>
+						  <a href="resumeviews.php">0</a> times your resume was viewed
+						</div>
+						<div class="clr"></div>
+			  </div>
+                            
+	          <div class="data">
+	            <div class="jobapp lt"></div>
+	            <div class="lt" style="padding-left:9px; width:87%;">
+	              <p style="padding-bottom:5px;"><strong>Job Applications</strong></p>
+	              <a href="http://search./jobs/application-history.php">0</a> jobs you have applied </div>
+	            <div class="clr"></div>
+              </div>
+<div class="data">
+		    <div class="invtn lt"></div>
+						<div class="lt" style="padding-left:9px; width:87%;">
+							<p style="padding-bottom:5px;"><strong>Invitations</strong></p>
+						  <a href="invitation.php">0</a> new invitations
+						</div>
+						<div class="clr"></div>
+			  </div>
+
+			  <div class="data">
+						<div class="conne lt"></div>
+						<div class="lt" style="padding-left:9px; width:87%;">
+							<p style="padding-bottom:5px;"><strong>Connections</strong></p>
+						  <a href="addressbook.php">0</a> connections in your network
+						</div>
+						<div class="clr"></div>
+					</div>
+										
+			  </div>
+				<p style="padding-top:15px;"></p>
+
+				<div class="hd" style="border-bottom:solid 1px #DEDEDE; padding-bottom:5px;"><strong>Explore</strong> our Services</div>
+				
+				<p style="padding:10px 0px; font-size:10px;"><strong>PREMIUM RESUME SERVICES</strong></p>
+				<p style="padding:0px 0px 10px 10px;"><a href="resume-writing.php" class="mylnk11">Resume Writing</a></p>
+				<p style="padding:0px 0px 10px 10px;"><a href="resume-broadcast.php" class="mylnk11">Resume Broadcast</a></p>
+				<p style="padding:0px 0px 10px 10px;"><a href="resume-highlight.php" class="mylnk11">Resume Highlight</a></p>
+				<!-- <p style="padding:0px 0px 10px 10px;"><a href="resume-assessment.php" class="mylnk11">Resume Assessment</a></p> -->
+
+				<p style="padding:10px 0px; font-size:10px;"><strong>TOP CHANNELS</strong></p>
+				<p style="padding:0px 0px 10px 10px;"><a href="" target="_blank" class="mylnk11">IT &amp; Telecommunication</a></p>
+				<p style="padding:0px 0px 10px 10px;"><a href="" target="_blank" class="mylnk11">Sales</a></p>
+				<p style="padding:0px 0px 10px 10px;"><a href="" target="_blank" class="mylnk11">Marketing and Communication</a></p>
+
+				<p style="padding:10px 0px; font-size:10px;"><strong>SUBSCRIBE</strong></p>
+				<p style="padding:0px 0px 10px 10px;"><a href="feeds/" target="_blank" class="mylnk11">RSS Feeds</a></p>
+		
+				<p style="padding-top:5px;"></p>
+		  </td>
+		  <td style="padding-top:15px;" valign="top" width="500">
+				<table border="0" cellpadding="0" cellspacing="0" width="100%">
+					<tbody><tr>
+						<td valign="top" width="28%"><img src="images/candidate_profile/m-noimage.gif" alt="" border="0"></td>
+						<td valign="top" width="72%">
+							<p style="text-align:right; padding-bottom:25px;" class="note">Last Login : {$lastlogin}</p>
+								
+							<span style="font:normal 20px Arial; color:#555;">Hi!</span> <span style="font:normal 21px Arial; color:#1CAED4;">{$name}</span>
+							<p style="padding-top:15px;"></p>
+							<div id="s">
+								<div class="lt" name="mblogplain" id="mblogplain" style="padding-top: 12px; display: none;"></div>	
+								<div style="display: block;" class="bgtxtBox lt" id="mblogtxt">
+									<input name="microblog" id="microblog" class="inactive" value="What are you doing right now?" onfocus="focTxtbox()" type="text">
+								</div>
+
+								<div class="lt" style="padding:12px 0px 0px 7px;" id="edid"><a onclick="focTxtbox()" class="mylnk2">Edit</a></div>
+									
+								<div id="h" class="lt" style="display: none; padding: 12px 0px 0px 7px;"><a href="javascript:void(0);" onclick="editmicroblog()" class="mylnk">Save</a>&nbsp;<span style="color:#1263C8">|</span>&nbsp;<a href="javascript:void(0);" class="mylnk" onclick="showEd(),toggle('s','h'),cancelmblog()">Cancel</a></div>
+							</div>
+							<input name="mbhid" id="mbhid" value="" type="hidden">
+							<input name="Uid" id="Uid" value="manishankarraju" type="hidden">
+						</td>
+					</tr>
+				</tbody></table>
+				<p style="padding-top:20px;"></p>
+					
+				<!-- My Resume -->
+			<table class="myresume" border="0" cellpadding="0" cellspacing="0" width="100%">
+					<tbody><tr>
+						<td colspan="2" style="border-bottom:solid 1px #DEDEDE; padding-bottom:5px;">
+							<div class="hd lt"><img src="images/candidate_profile/my-resume1.gif" alt="" class="icon icopos" border="0">&nbsp;&nbsp;My <strong>Active Resume</strong></div>
+							<div class="rt" style="padding:15px 5px 0px 0px; font-size:10px; color:#A2A2A2;">Last Updated: 22nd Sep 2012</div>
+						</td>
+					</tr>
+										<tr>
+						<th style="padding-top:10px;" width="30%">Resume Headline:</th>
+						<td style="padding-top:10px;" width="70%"><strong>{$resume_headline}</strong></td>
+					</tr>
+										<tr>
+						<th>Email:</th>
+						<td>{$email}&nbsp;&nbsp;<a href="edit_accountinfo.php" class="slnk1">Verify</a></td>
+					</tr>
+															<tr>
+						<th>Mobile:</th>
+						<td>{$mobile_no} &nbsp;&nbsp;{if $mobile_verified=='Yes'}<img src="images/candidate_profile/verified.gif" alt="" style="vertical-align:middle;" border="0">{else}<input type="button" value="Verify" onclick="window.location='mobile-validation.php'"/>{/if}</td>
+					</tr>
+															<tr>
+						<th>Experience:</th>
+						<td>{$experience_Y} years {$experience_M} months</td>
+					</tr>
+										<tr>
+						<th style="padding-top:10px;">&nbsp;</th>
+						<td style="padding-top:10px;"><a href="resumepreview.php" target="_blank"><img src="images/candidate_profile/sbtn-preview-resume.gif" alt="" border="0"></a>&nbsp;&nbsp;<a href="editresume.php"><img src="images/candidate_profile/sbtn-edit-resume.gif" alt="" border="0"></a></td>
+					</tr>
+				  </tbody></table>
+
+			<!-- Whats on your network -->
+				
+				<table border="0" cellpadding="0" cellspacing="0" width="100%">
+					<tbody>
+						
+					<tr>
+												 <td style="padding-top:10px;" align="right">&nbsp;</td>
+												<td>&nbsp;</td>
+						<td style="padding-top:10px;" align="right"><a href="invitefriends.php" class="mylnk">Import Contacts</a></td>
+					</tr>
+				</tbody></table>
+			<p style="padding-top:25px;"></p>
+
+		    <!-- Salary Center & What's New --></td>
+		  <td style="padding:15px 0px 0px 20px;" valign="top" width="192">
+				<!-- Email Verification -->
+				<div class="rpanel1" id="eemail1" onclick="swap(this.id);" style="background:none; background-color:#9CC3E7; height:24px;"><span class="lt">Email Verification</span> <span class="rt"><a href="javascript:void(0);"><img src="images/candidate_profile/arw-down.gif" alt="" id="arw-eemail" border="0" vspace="2"></a></span><div class="clr"></div></div>
+				<div id="eemail" style="display:none;">
+											<div class="rpanel-mid" style="border-bottom:solid 2px #DBECFD; padding-bottom:15px;">
+							<img src="images/candidate_profile/semail.gif" alt="" class="icon icopos" border="0">&nbsp;&nbsp;<span style="color:#F9372C;"><strong>Incomplete</strong></span>
+							<p style="padding:5px 0px 10px 0px; line-height:16px;">To 
+complete your email verification process, please click on the link 
+provided below. Our email verification protects your identity and allows
+ you to securely use our system.</p>
+							<a href="edit_accountinfo.php" class="mylnk12">Verify email address</a>
+						</div>
+				</div>
+				<p style="padding-top:10px;"></p>				
+					
+				<!-- Mobile Verification -->
+				<div class="rpanel1" id="mobile1" onclick="swap(this.id);" style="background:none; background-color:#9CC3E7; height:24px;"><span class="lt">Phone Verification</span> <span class="rt"><a href="javascript:void(0);"><img src="images/candidate_profile/arw-down.gif" alt="" id="arw-mobile" border="0" vspace="2"></a></span><div class="clr"></div></div>
+				<div id="mobile" style="display:none;">
+										<div class="rpanel-mid" style="border-bottom:solid 2px #DBECFD; padding-bottom:15px;">
+										  <img src="images/candidate_profile/sphone.gif" alt="" class="icon icopos" border="0">&nbsp;&nbsp;<span style="color:#F9372C;"><strong>Mobile: Complete</strong></span>
+												
+										  <img src="images/candidate_profile/sphone.gif" alt="" class="icon icopos" border="0">&nbsp;&nbsp;<span style="color:#F9372C;"><strong>Home: Incomplete</strong></span><br>
+						
+						<p style="padding:5px 0px 10px 0px; line-height:16px;">Please verify your phone number by clicking on the verify link. Verifying your phone number adds credibility to your profile.</p>
+						<a href="mobile-validation.php" class="mylnk12">Verify phone number</a>
+					</div>
+				</div>
+				<p style="padding-top:10px;"></p>
+					
+				<!-- Profile Completeness -->
+				<div class="rpanel1" id="profile1" onclick="swap(this.id);" style="background:none; background-color:#9CC3E7; height:24px;"><span class="lt">Profile Completeness</span> <span class="rt"><a href="javascript:void(0);"><img src="images/candidate_profile/arw-down.gif" alt="" id="arw-profile" border="0" vspace="2"></a></span><div class="clr"></div></div>
+				<div id="profile" style="display:none;">
+					<div class="rpanel-mid" style="border-bottom:solid 2px #DBECFD; padding-bottom:15px;">
+						<div class="lt">
+						<div id="chrt">
+							<div id="chart">
+								<div class="chart c60"></div>
+							</div>
+						</div>
+						</div>
+						<div class="lt" style="padding:10px 0px 5px 10px;"><span style="color:#F9372C;"><strong>58% Complete</strong></span></div>
+						<div class="clr"></div>
+						<p style="padding:5px 0px 10px 0px; line-height:16px;">A complete profile adds credibility and attracts more employers and members.</p>
+					  <a href="editresume.php" class="mylnk12">Edit</a>	
+				  </div>
+				</div>
+				<p style="padding-top:10px;"></p>
+					
+				<!-- Privacy Settings -->					
+				<div class="rpanel1" id="privacy1" onclick="swap(this.id);" style="background:none; background-color:#9CC3E7; height:24px;"><span class="lt">Privacy &amp; Settings</span> <span class="rt"><a href="javascript:void(0);"><img src="images/candidate_profile/arw-down.gif" alt="" id="arw-privacy" border="0" vspace="2"></a></span><div class="clr"></div></div>
+				<div id="privacy" style="display:none;">
+					<div class="rpanel-mid" style="border-bottom:solid 2px #DBECFD; padding-bottom:15px;">
+						<table border="0" cellpadding="0" cellspacing="0" width="100%">
+							<tbody><tr>
+								<td colspan="2" style="padding-bottom:15px;">Protect your privacy and change your setings any time at your convenience.</td>
+							</tr>
+							<tr>
+								<td style="padding:3px 5px 0px 0px;" valign="top"><img src="images/candidate_profile/arw1.gif" alt="" border="0"></td>
+								<td style="padding-bottom:10px;"><a href="edit_accountinfo.php" class="mylnk">Change your login information</a></td>
+							</tr>
+							<tr>
+								<td style="padding:3px 5px 0px 0px;" valign="top"><img src="images/candidate_profile/arw1.gif" alt="" border="0"></td>
+								<td style="padding-bottom:10px;"><a href="public_profile.php" class="mylnk">Decide what others get to view on your profile</a></td>
+							</tr>
+							<tr>
+								<td style="padding:3px 5px 0px 0px;" valign="top"><img src="images/candidate_profile/arw1.gif" alt="" border="0"></td>
+								<td style="padding-bottom:10px;"><a href="blocked_company.php" class="mylnk">Manage what recruiters can see</a></td>
+							</tr>
+							<tr>
+								<td style="padding:3px 5px 0px 0px;" valign="top"><img src="images/candidate_profile/arw1.gif" alt="" border="0"></td>
+								<td><a href="manage_subscription.php" class="mylnk">Manage your subscriptions</a></td>
+							</tr>
+						</tbody></table>
+					</div>
+				</div>
+				<p style="padding-top:10px;"></p>
+
+
+
+<p style="padding-top:15px;"></p>
+<div class="rpanel192-bot"></div>
+
+<!--<p style="padding-top:10px;"></p>
+
+<div class="rpanel192-top">Advertisement</div>
+<div class="rpanel192-mid">
+	<iframe src="http://c2.zedo.com/jsc/c2/ff2.html?n=570;c=1187/563;s=64;d=13;w=180;h=150" frameborder="0" marginheight="0" marginwidth="0" scrolling="no" allowTransparency="true" width="180" height="150"></iframe>
+</div>
+<div class="rpanel192-bot"></div>-->				<p style="padding-top:10px;"></p>
+
+				<!-- Invite Contacts -->
+
+			  <p style="padding-top:10px;"></p>
+
+				<!-- Make the most on ClickJobs -->
+
+			  <p style="padding-top:10px;"></p>
+
+		    <!-- Support a Cause --></td>
+		</tr>
+	</tbody></table>
+    <script>
+function swap(divid)
+{
+	if(divid == 'eemail1') {
+		 if(document.getElementById('eemail').style.display == "none") {	
+		       document.getElementById("arw-eemail").src="images/candidate_profile/arw-up.gif";
+		       document.getElementById("eemail1").className="rpanel";
+		       $("#eemail").slideDown("slow");
+
+			if(document.getElementById('mobile').style.display == "block") {
+                       document.getElementById("arw-mobile").src="images/candidate_profile/arw-down.gif";
+                       document.getElementById("mobile1").className="rpanel1";
+                       $("#mobile").slideToggle("slow");
+			}
+                      
+			if(document.getElementById('profile').style.display == "block") { 
+                       document.getElementById("arw-profile").src="images/candidate_profile/arw-down.gif";
+                       document.getElementById("profile1").className="rpanel1";
+                       $("#profile").slideToggle("slow");
+			}
+			
+			if(document.getElementById('privacy').style.display == "block") {	
+                       document.getElementById("arw-privacy").src="images/candidate_profile/arw-down.gif";
+                       document.getElementById("privacy1").className="rpanel1";
+                       $("#privacy").slideToggle("slow");
+			}
+
+		 } else {
+		       document.getElementById("arw-eemail").src="images/candidate_profile/arw-down.gif";
+		       document.getElementById("eemail1").className="rpanel1";
+		       $("#eemail").slideToggle("slow");
+
+		 }
+	}
+
+	        if(divid == 'mobile1') {
+                 if(document.getElementById('mobile').style.display == "none") {
+
+                       document.getElementById("arw-mobile").src="images/candidate_profile/arw-up.gif";
+                       document.getElementById("mobile1").className="rpanel";
+                       $("#mobile").slideDown("slow");
+
+                        if(document.getElementById('profile').style.display == "block") {
+                       document.getElementById("arw-profile").src="images/candidate_profile/arw-down.gif";
+                       document.getElementById("profile1").className="rpanel1";
+                       $("#profile").slideToggle("slow");
+                        }
+
+                        if(document.getElementById('privacy').style.display == "block") { 
+                       document.getElementById("arw-privacy").src="images/candidate_profile/arw-down.gif";
+                       document.getElementById("privacy1").className="rpanel1";
+                       $("#privacy").slideToggle("slow");
+                        }
+
+                        if(document.getElementById('eemail').style.display == "block") {
+                       document.getElementById("arw-eemail").src="images/candidate_profile/arw-down.gif";
+                       document.getElementById("eemail1").className="rpanel1";
+                       $("#eemail").slideToggle("slow");
+                        }
+
+
+                 } else {
+                       document.getElementById("arw-mobile").src="images/candidate_profile/arw-down.gif";
+                       document.getElementById("mobile1").className="rpanel1";
+                       $("#mobile").slideToggle("slow");
+                 }
+        }
+
+                if(divid == 'privacy1') {
+                 if(document.getElementById('privacy').style.display == "none") {
+
+                       document.getElementById("arw-privacy").src="images/candidate_profile/arw-up.gif";
+                       document.getElementById("privacy1").className="rpanel";
+                       $("#privacy").slideDown("slow");
+
+                        if(document.getElementById('profile').style.display == "block") {
+                       document.getElementById("arw-profile").src="images/candidate_profile/arw-down.gif";
+                       document.getElementById("profile1").className="rpanel1";
+                       $("#profile").slideToggle("slow");
+                        }
+
+                        if(document.getElementById('mobile').style.display == "block") {
+                       document.getElementById("arw-mobile").src="images/candidate_profile/arw-down.gif";
+                       document.getElementById("mobile1").className="rpanel1";
+                       $("#mobile").slideToggle("slow");
+                        }
+
+                        if(document.getElementById('eemail').style.display == "block") {
+                       document.getElementById("arw-eemail").src="images/candidate_profile/arw-down.gif";
+                       document.getElementById("eemail1").className="rpanel1";
+                       $("#eemail").slideToggle("slow");
+                        }
+
+
+                 } else {
+                       document.getElementById("arw-privacy").src="images/candidate_profile/arw-down.gif";
+                       document.getElementById("privacy1").className="rpanel1";
+                       $("#privacy").slideToggle("slow");
+                 }
+        }
+
+                if(divid == 'profile1') {
+                 if(document.getElementById('profile').style.display == "none") {
+
+                       document.getElementById("arw-profile").src="images/candidate_profile/arw-up.gif";
+                       document.getElementById("profile1").className="rpanel";
+                       $("#profile").slideDown("slow");
+
+                        if(document.getElementById('privacy').style.display == "block") {
+                       document.getElementById("arw-privacy").src="images/candidate_profile/arw-down.gif";
+                       document.getElementById("privacy1").className="rpanel1";
+                       $("#privacy").slideToggle("slow");
+                        }
+
+                        if(document.getElementById('mobile').style.display == "block") {
+                       document.getElementById("arw-mobile").src="images/candidate_profile/arw-down.gif";
+                       document.getElementById("mobile1").className="rpanel1";
+                       $("#mobile").slideToggle("slow");
+                        }
+
+                        if(document.getElementById('eemail').style.display == "block") {
+                       document.getElementById("arw-eemail").src="images/candidate_profile/arw-down.gif";
+                       document.getElementById("eemail1").className="rpanel1";
+                       $("#eemail").slideToggle("slow");
+                        }
+
+
+                 } else {
+                       document.getElementById("arw-profile").src="images/candidate_profile/arw-down.gif";
+                       document.getElementById("profile1").className="rpanel1";
+                       $("#profile").slideToggle("slow");
+                 }
+        }
+
+}	
+	</script>

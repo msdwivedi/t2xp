@@ -1,0 +1,827 @@
+/* Getting the new tags to behave */
+article, aside, audio, canvas, command, datalist, details, embed, figcaption, figure, footer, header, hgroup, keygen, meter, nav, output, progress, section, source, video{ display: block; }
+mark, rp, rt, ruby, summary, time{ display: inline }
+
+/* Global properties ======================================================== */
+body { 
+	background: #f7fafb; 
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px; 
+	line-height: 18px;
+	color: #61767c;
+	min-width: 1000px;
+}
+html, body {height: 100%;}
+
+p {padding-top: 18px;}
+.p {padding: 11px 0 9px !important;}
+
+.top {padding-top: 0px;}
+.top1 {padding-top: 8px;}
+.top2 {padding-top: 11px;}
+.top3 {padding-top: 18px;}
+.top4 {padding-top: 0px;}
+.top5 {padding-top: 27px;}
+
+.bot {padding-bottom: 9px;}
+.bot1 {padding-bottom: 23px;}
+.bot2 {padding-bottom: 14px;}
+.bot3 {padding-bottom: 30px;}
+
+.margin-left {margin-left: -4px;}
+.margin-bot {margin-bottom: -18px !important;}
+.margin-bot1 {margin-bottom: 0px !important;}
+
+.pad-left {padding: 12px 0 0 134px; color: #61767c;}
+
+a {color: #61767c; outline: none;}
+a:hover{text-decoration: none;}
+
+/* Global Structure ============================================================= */
+.main {
+	margin: 0 auto;
+	width: 980px;
+}
+
+	/* Header */
+	header{
+		height: 324px;
+		background: url(../images/header-bg.gif) 0 0 repeat-x #fff;
+	}
+	
+	/* Content */
+	section#content {
+		background: url(../images/content-bg.gif) 0 0 repeat-x;
+	}			
+	/* Footer */
+	footer{
+		height: 80px;
+	}
+/* Left & Right alignment */
+
+.fleft { float: left;}
+.fright { float: right;}
+.clear { clear: both;}
+
+.col-1, .col-2, .col-3, .col-4, .col-5 {float: left;}
+
+.alignright {text-align: right;}
+.aligncenter {text-align: center;}
+
+.wrapper { 
+	width: 100%;
+	overflow: hidden;
+}
+
+/*----- form defaults -----*/
+input, select, textarea { 
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 1em;
+	vertical-align: middle;
+	font-weight: normal;
+}
+
+/*----- other -----*/
+.img-indent {margin: 0 16px 0 0; float: left;}
+.extra-wrap {overflow: hidden;}
+
+h2 {font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;}
+/*=============================================================================== text =====*/
+h1 {
+	padding: 20px 0 17px 1px;
+	position: relative;
+	float: left;
+}
+	h1 a {
+		display: block;
+		height: 60px;
+		width: 223px;
+		text-indent: -5000px;
+		background: url(../images/logo.png) left top no-repeat;
+	}
+h2 {
+	font-size: 18px;
+	line-height: 24px;
+	color: #49c0f2;
+	padding: 4px 0px 25px 27px;
+	text-transform: uppercase;
+	font-weight: normal;
+}
+
+.h2-bg1 {background: url(../images/h2-bg1.jpg) 0 0 no-repeat;}
+.h2-bg2 {background: url(../images/h2-bg2.jpg) 0 0 no-repeat;}
+.h2-bg3 {background: url(../images/h2-bg3.gif) 0 0 no-repeat;}
+.h2-bg4 {background: url(../images/h2-bg4.jpg) 0 0 no-repeat; padding-left: 39px;}
+
+.text_3 {
+	font-size: 14px;
+	color: #1291d3;
+	padding-top: 6px;
+	margin-bottom: -7px;
+	display: block;
+}
+	.text_3 span {
+		display: block;
+		font-size: 12px;
+		color: #61767c;
+		padding-top: 1px;
+	}
+.color {color: #76aa3e !important;}
+/*=============================================================================== social =====*/
+.social {
+	float: right;
+	width: 70px;
+	margin-right: -1px;
+	padding-top: 40px;
+	overflow: hidden;
+}
+	.social img {
+		float: left;
+		margin-left: 13px
+	}
+/*=================================================================================================================== header =====*/
+/*=============================================================================== nav =====*/
+nav {
+	padding: 0px 0 3px 0px;
+	width: 100%;
+	overflow: hidden;
+}
+	nav ul {
+		background: url(../images/nav-li-bg.gif) right top no-repeat;
+		height: 50px;
+		overflow: hidden;
+		float: left;
+	}
+	nav ul  li {
+		font-size: 13px;
+		line-height: 24px;
+		float: left;
+		background: url(../images/nav-li-bg.gif) 0 0 no-repeat;
+		font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+		margin-left: -2px;
+	}
+		nav ul li a {
+			color: #258db4;
+			text-decoration: none;
+			display: inline-block;
+			cursor: pointer;
+			text-transform: uppercase;
+			position: relative;
+			font-weight: bold;
+			margin: 0 0px 0 0;
+		}
+			nav ul li a span {
+				background: none;
+				display: inline-block;
+				padding: 0px 6px 0 6px;
+			}
+			nav ul li a span span {
+				background: none;
+				padding: 13px 17px 13px 16px;
+			}
+				nav ul li a:hover, nav .active {
+					background:url(../images/nav-left.gif) left top no-repeat;
+					color:#fff;
+				}
+				nav ul li a:hover span, nav .active span {
+					background:url(../images/nav-right.gif) right top no-repeat;
+				}
+				nav ul li a:hover span span, nav .active span span {
+					background:url(../images/nav-tail.gif) 0 0 repeat-x;
+				}
+		nav .first {margin: 0;}
+
+/*=============================================================================== employers =====*/
+.employers {
+	background: url(../images/employers-bg.jpg) 0 0 no-repeat;
+	width: 225px;
+	height: 61px;
+	float: right;
+	padding: 0 18px;
+	color: white;
+}
+	.employers strong {
+		font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+		font-size: 18px;
+		line-height: 24px;
+		color: white;
+		display: block;
+		padding: 8px 0 0;
+	}
+	.employers div {padding: 1px 0 0 1px;}
+	.employers a {text-decoration: none; color: white;}
+		.employers a:hover {text-decoration: underline;}
+/*=================================================================================================================== content =====*/
+
+/*=============================================================================== indents =====*/
+.indent {padding: 40px 0px 73px 0px}
+.indent1 {padding: 40px 0px 19px 0px}
+.indent2 {padding: 40px 0px 59px 0px}
+/*=============================================================================== col-indents =====*/
+.col-indent {padding-right: 40px;}
+.col-indent1 {padding-right: 64px;}
+.col-indent2 {padding-right: 50px;}
+/*=============================================================================== boxes =====*/
+
+/*=============================================================================== line-hor =====*/
+.line-hor {
+	background: url(../images/line-hor-bg.gif) left bottom no-repeat;
+	height: 32px;
+	padding-bottom: 49px;
+	margin-bottom: -1px;
+}
+/*=============================================================================== lists =====*/
+
+.list {margin: -1px 0 0; padding: 0 0 10px;}
+	.list li {
+		font-size: 14px;
+		line-height: 30px;
+		background: url(../images/list-bg.gif) 0px 12px no-repeat;
+		padding-left: 11px;
+	}
+		.list li a {
+			color: #1291d3;
+			font-weight: bold;
+			text-decoration: none;
+		}
+			.list li a:hover {color: #5ec300;}
+
+.list_1 {margin-bottom: -9px;}
+	.list_1 li {width: 100%; overflow: hidden; padding: 12px 0 24px 0;}
+		.list_1 img {
+			float: left;
+			margin-right: 8px;
+		}
+		.list_1 a {
+			text-decoration: none;
+			font-size: 14px;
+			color: #1291d3;
+			font-weight: bold;
+			display: inline-block;
+			padding: 3px 0 1px 0;
+		}
+			.list_1 a:hover {text-decoration: underline;}
+		.list_1 span {
+			display: block;
+			font-size: 11px;
+			color: #61767c;
+		}
+	.list_1 .last {padding: 12px 0 0;}
+
+
+.date-list {padding: 1px 0 0;}
+	.date-list li {
+		width: 100%;
+		overflow: hidden;
+		border-bottom: 1px solid #dcdfdf;
+		padding: 10px 0 9px 0;
+	}
+		.date-list img {
+			float: left;
+			margin-right: 15px;
+			padding-left: 1px;
+		}
+		.date-list li a {
+			text-decoration: none;
+			font-weight: bold;
+			font-size: 14px;
+			color: #1291d3;
+			display: inline-block;
+			padding: 6px 0 0;
+		}
+			.date-list li a:hover {text-decoration: underline;}
+		.date-list li strong {
+			display: block;
+			padding: 1px 0 0;
+		}
+		.date-list li div {
+			width: 365px;
+			overflow: hidden;
+			padding: 11px 0 0 0;
+			font-size: 11px;
+		}
+			.date-list li div span {display: inline-block;}
+			.date-list li div .text_1 {
+				float: left; background: 
+				url(../images/text_1-bg.gif) 1px 2px no-repeat; 
+				padding: 0 18px 0 24px;
+			}
+				.date-list li div .text_1 strong {
+					color: #f08b28;
+					display: inline-block;
+				}
+					.date-list li div .text_1 span {line-height: 20px;}
+			.date-list li div .text_2 {
+				float: left;
+				background: url(../images/text_2-bg.gif) 1px 2px no-repeat;
+				padding: 0 0 2px 25px;
+			}
+				.date-list li div .text_2 strong {
+					color: #76aa3e;
+					display: inline-block;
+					line-height: 16px;
+				}
+		.date-list span a {
+			color: #1291d3; 
+			text-decoration: none; 
+			font-weight: normal;
+			padding: 0;
+			font-size: 12px;
+		}
+			.date-list span a:hover {color: #f08b28; text-decoration: none;}
+	.date-list .last {border: none;}
+
+/*=============================================================================== links =====*/
+.link {
+	font-size: 11px;
+	font-weight: bold;
+	color: #f08b28;
+	display: inline-block;
+	margin-top: 4px;
+}
+/*=============================================================================== links =====*/
+.links {padding: 8px 0 0 0;}
+	.links a {
+		font-size: 11px;
+		color: #61767c;
+	}
+/*=============================================================================== nav =====*/
+
+/*=============================================================================== contact =====*/
+.contact{padding-top: 14px}
+.contact span {
+	display: inline-block;
+	vertical-align: baseline;
+	width: 100px;
+}
+/*=================================================================================================================== footer =====*/
+footer .wrapper {
+	border-top: 1px solid #c1c3c4;
+	font-family: Arial, Helvetica, sans-serif;
+	color: #393a3a;
+}
+	footer span {
+		float: left; padding-top: 15px;
+	}
+	footer p {
+		float: right; padding-top: 15px;
+	}
+		footer p a {color: #393a3a; text-decoration: none;}
+			footer p a:hover {text-decoration: underline;}
+/*------------------------------------------------------------------------------------------------------------------- forms -----*/
+
+/* -------------
+ * Radios
+ * ------------- */
+.jqTransformRadioWrapper {float: left;display:block; margin:0px 4px;	margin-top:5px;}
+.jqTransformRadio {
+	background: transparent url(../images/radio.gif) no-repeat center top;
+	vertical-align: middle;
+	height: 10px;
+	width: 10px;
+	display:block;/*display: -moz-inline-block;*/
+}
+
+
+/* -------------
+ * Checkboxes
+ * ------------- */
+span.jqTransformCheckboxWrapper{
+	display: inline-block;
+	margin: 1px 4px 0 0;
+}
+a.jqTransformCheckbox {
+	background: transparent url(../images/checkbox.gif) no-repeat center top;
+	vertical-align: middle;
+	height: 21px !important;
+	width: 21px !important;
+	display:block;/*display: -moz-inline-block;*/
+}
+a.jqTransformChecked {
+	background: transparent url(../images/checkbox-active.gif) no-repeat center top;
+}
+
+.text {display: inline-block; padding: 1px 20px 0 4px;}
+.pad-right {padding-right: 25px;}
+.pad-right1 {padding-right: 24px;}
+/* -------------
+ * Checked - Used for both Radio and Checkbox
+ * ------------- */
+.checkbox a.jqTransformChecked { background-position: center bottom;}
+
+
+/* -------------
+ * Selects
+ * ------------- */
+.jqTransformSelectWrapper {
+	width:320px !important;
+	position:relative;
+	height: 30px;
+	background: url(../images/select_left.gif) no-repeat top left;
+	float:left;
+}
+
+.jqTransformSelectWrapper span {
+	font-size: 12px;
+	float: none;
+	position: absolute;
+	white-space: nowrap;
+	height: 30px;
+	line-height: 15px;
+	padding: 4px 0 0 7px;
+	overflow: hidden;
+	cursor:pointer;
+}
+
+.jqTransformSelectWrapper  a.jqTransformSelectOpen {
+	display: block;
+	position: absolute;
+	right: 0px;
+	width: 33px;
+	height: 30px;
+	background: url(../images/select_right.gif) no-repeat center center;
+}
+
+.jqTransformSelectWrapper ul {
+	position: absolute;
+	top: 30px;
+	left: 0px;
+	list-style: none;
+	display: none;
+	margin: 0px;
+	padding: 0px;
+	height: 150px;
+	overflow: auto;
+	z-index:10;
+	width:287px !important;
+}
+
+.jqTransformSelectWrapper ul a {
+	display: block;
+	padding: 2px 3px;
+	text-decoration: none;
+	color:#333;
+	background-color: #f1f1f1;
+	font-size: 12px;
+}
+
+.jqTransformSelectWrapper ul a.selected {
+	background: #dfdfdf;
+	color: #333;
+}
+
+.jqTransformSelectWrapper ul a:hover, .jqTransformSelectWrapper ul a.selected:hover {
+	background:#b7b7b7;
+	color: #fff;
+}
+
+/* -------------
+ * Hidden - used to hide the original form elements
+ * ------------- */
+.jqTransformHidden {display: none;}
+
+
+
+
+#search-form input.text {
+	width:178px;
+}
+
+/*=============================================================================== SearchForm =====*/
+#SearchForm {padding: 0px 0 0; margin-top: -9px;}
+	#SearchForm label {
+		height:58px; 
+		padding: 10px 35px 0 0;
+		display: inline-block;
+	}
+	#SearchForm strong {
+		font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+		font-size: 30px;
+		line-height: 1.3207em;
+		display: inline-block;
+		color: #f08b28;
+		margin: -5px 0 0;
+		padding: 0 11px 0 0;
+		letter-spacing: -1px
+	}
+	#SearchForm em.diffrent_em {
+		width: 240px;
+		padding: 0px 10px;
+		font-size: 12px;
+		line-height: 24px;
+		background: url(../images/SearchForm-label-bg.gif) no-repeat 0 0; 
+		height: 30px;
+		display: inline-block;
+		font-style:normal;
+		
+	}
+	#SearchForm b {
+		width: 240px;
+		padding: 1px 10px;
+		font-size: 12px;
+		line-height: 24px;
+		background: url(../images/SearchForm-label-bg1.gif) no-repeat 0 0; 
+		height: 30px;
+		display: inline-block;
+		font-weight: normal;
+	}
+	#SearchForm input[type="text"] {/*
+		width:238px !important;
+		border: none; 
+		padding: 7px 0px;
+		background :none; 
+		color:#61767c;
+		line-height:14px;
+		font-family: Verdana, Geneva, sans-serif;
+		float: left;
+	*/}
+	#SearchForm .SearchForm-link {
+		display: inline-block;
+		width: 129px !important;
+		height: 39px;
+		background: url(../images/SearchForm-a-bg.jpg) 0 0 no-repeat;
+		text-decoration: none;
+		text-transform: uppercase;
+		text-align: center;
+		font-size: 24px;
+		line-height: 1.2307em;
+		color: white;
+		font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+		padding: 11px 0 0;
+	}
+		#SearchForm .SearchForm-link:hover {background: url(../images/SearchForm-a-bg-hover.jpg) 0 0 no-repeat;}
+
+
+#PostForm {
+	padding-top:16px;
+}
+	#PostForm .column1 {
+		float:left;
+		width:331px;
+	}
+	#PostForm .column2 {
+		float:left;
+		width:318px;
+	}
+	#PostForm label {
+		height: 45px; 
+		display: block;
+	}
+	#PostForm input {
+		background: none; 
+		border: none;
+		padding:7px 0px;
+		margin: 0 10px;
+		color:#61767c;
+		font-family: Verdana, Geneva, sans-serif;
+		width: 270px !important;
+	}
+	#PostForm strong {
+		height: 150px; 
+		display: block;
+		background: url(../images/PostForm-label-bg.gif) 0 0 no-repeat;
+		font-weight: normal;
+		width: 290px;
+	}
+	#PostForm .text {
+		font-size: 11px;
+		line-height: 15px;
+		color: #61767c;
+		padding: 0;
+		font-weight: normal;
+		display: inline-block;
+		width: 260px;
+		padding: 3px 0 7px 4px;
+	}
+	#PostForm .radio {
+		padding: 8px 0 0 0;
+		width: 100%;
+		color: #61767c;
+	}
+		#PostForm .radio span {
+			float: left;
+			font-size: 11px;
+			line-height: 16px;
+			margin-right: 7px;
+		}
+		#PostForm .radio p {padding: 0; display: inline-block; float:left; font-size: 11px; margin-right: 15px;}
+	 
+#PostForm .radio a.jqTransformChecked {
+	background: transparent url(../images/radio-active.gif) no-repeat center top;
+}	
+
+#informationForm {
+	padding-top:15px;
+	font-size:12px;
+	line-height:18px; 
+	color:#8d8d8d;
+	width: 100%;
+	margin-bottom: -23px;
+	position: relative;
+}
+	#informationForm .column1 p {
+		display: inline-block;
+		padding-top: 4px;
+		width: 73px;
+		text-align: right;
+		float: left;
+	}
+		#informationForm .input {
+			width:300px !important;
+			padding-left:14px;
+			/*border: none;*/
+			/*padding:0px 10px;*/
+			/*background: url(../images/ContactForm-label-bg.gif) 0 0 no-repeat; */
+			color:#61767c; 
+			float:left;
+		}
+/*		#informationForm input {
+			width: 300px !important;
+			border: none; 
+			padding: 8px 0px;
+			background: none; 
+			color: #727b89;
+			line-height: 12px;
+		}*/
+		#informationForm select{
+			padding-left:14px;
+		}
+		#informationForm textarea {
+			font-size: 12px;
+		}
+	#informationForm label {
+		height:45px;
+		display:block;
+	}
+	#informationForm .link {
+		margin:8px 0px 0px 15px;
+	}
+	#informationForm .column1 {
+		float:left; width:206px; margin-right:40px;
+		text-align:right;
+	}
+	#informationForm .column2 {
+		float:left; width:534px;
+	}
+	#informationForm .column1 .textarea {
+		width:322px; 
+		border: none;
+		background: url(../images/informationForm-textarea-bg1.gif) 0 0 no-repeat; 
+		font-size:1em;
+		color:#a4a4a4; 
+		float:right;
+		padding: 0px 0 0px;		  
+		display: block;	
+		height: 99px;
+	}	
+	#informationForm .column1 textarea {
+		width:296px; 
+		height:83px; 
+		border: none;
+		background: none; 
+		padding: 6px 10px;  
+		color: #727b89;
+		overflow:auto; 
+	}
+
+	#informationForm .column2 textarea {
+		
+/*		border: none;
+		background: none;
+		background: url(../images/informationForm-textarea-bg.gif) 0 0 no-repeat;*/
+		width:376px;
+		height:80px;
+		padding: 0px 14px;
+		vertical-align:top; 
+		color: #727b89;
+		overflow: auto;
+		background-position:left;
+	}
+.form_wrapper{
+width: 90%;
+padding:10px;
+
+border:1px solid #CCC;
+}
+.size1-input{
+	width:20px;
+}
+.container {
+	width: 100%;
+}	
+	#informationForm .pad-left .col-1 .jqTransformSelectWrapper {width: 215px !important;}
+		#informationForm .pad-left .col-1 .jqTransformSelectWrapper ul {width: 183px !important;}
+	
+	#informationForm .pad-left .col-2 .jqTransformSelectWrapper {width: 132px !important;}
+		#informationForm .pad-left .col-2 .jqTransformSelectWrapper ul {width: 100px !important;}
+	.text-opt {
+		display: inline-block;
+		width: 73px;
+		margin-right: 11px;
+		text-align: right;
+		float: left;
+		color: #61767c;
+		line-height: 28px;
+	}
+	.text-opt1 {
+		display: inline-block;
+		width: 114px;
+		margin-right: 16px;
+		text-align: right;
+		float: left;
+		color: #61767c;
+		line-height: 28px;
+	}
+	.height {height: 45px !important;}
+
+#ContactForm {
+	color:#61767c;
+	width:630px;
+	padding-top:14px;
+	line-height: 28px;
+}
+	#ContactForm label {
+		height:45px;
+		display:block;
+	}
+	#ContactForm .link {
+		margin:16px 1px 0px 16px;
+	}
+	#ContactForm input {
+		background: none;
+		border: none;
+		width: 300px;
+		padding: 8px 0;
+		color: #61767c;
+		line-height: 12px;
+	}
+	#ContactForm span {
+		width:300px;
+		border: none;
+		padding:0px 10px;
+		background: url(../images/ContactForm-label-bg.gif) 0 0 no-repeat; 
+		color:#61767c; 
+		float:right;
+		margin-right: 236px;
+	}
+	#ContactForm textarea {
+		width:536px; 
+		height:148px; 
+		border: none;
+		background: none; 
+		padding:6px 0;
+		overflow:auto; 
+		color:#61767c; 
+		float:right;
+		line-height: 12px;
+	}
+	#ContactForm strong {
+		width:536px;
+		border: none;
+		padding:0px 10px;
+		background: url(../images/ContactForm-textarea-bg.gif) 0 0 no-repeat; 
+		color:#61767c; 
+		float:right;
+	}
+
+/*==========================================*/
+
+
+/*==========================================*/
+    
+/* Project specifics =========================================================== */
+/* Pour some CSS below ========================================================= */
+
+
+
+.list_forms_elements {margin-bottom: -9px;}
+	.list_forms_elements li {width: 100%; overflow: hidden; padding: 5px 0 5px 0;}
+		.list_forms_elements img {
+			float: left;
+			margin-right: 8px;
+		}
+		.list_forms_elements span {
+			display: block;
+			font-size: 11px;
+			color: #61767c;
+		}
+	.list_forms_elements .last {padding: 12px 0 0;}
+.field_error{
+	color:#e04747;
+}
+.required{
+	background-image:url(../images/required.gif);
+	background-repeat:no-repeat;
+	background-position:left;
+}
+.success_message{
+	height:50px;
+	width:100%;
+	animation:alternate;
+	border:1px solid red;
+	background:#FFC;
+	color:#006600;
+	font-size:16px;
+	font-weight:bold;
+	text-align:center
+}

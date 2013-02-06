@@ -1,0 +1,38 @@
+			<h2 class="h2-bg2">Search jobs</h2>
+			<form id="SearchForm" action="">
+				<label><strong>What?</strong><input name="keywords" type="text" value="{$keywords}" /></label>
+				<label><strong class="color">Where?</strong><input name="location" type="text" value="{$location}" /></label>
+				<a href="#" class="SearchForm-link" onClick="document.getElementById('SearchForm').submit()">Search</a>
+				<div class="wrapper">
+					<input name="typeofjob" type="checkbox" checked/><span class="text">any</span>
+					<input type="checkbox"/><span class="text pad-right">full-time</span>
+					<input type="checkbox"/><span class="text pad-right1">part-time</span>
+					<input type="checkbox"/><span class="text pad-right">permanent</span>
+					<input type="checkbox"/><span class="text">contract/temporary</span>
+                    Your Experience: <select name="cboWorkExp1" class="ht">
+<option selected="selected" value="-1">Select</option>
+<option value="0">Entry Level</option>
+<option value="1">1 year</option>
+<option value="2">2 years</option>
+<option value="3">3 years</option>
+<option value="4">4 years</option>
+<option value="5">5 years</option>
+<option value="6">6 years</option>
+<option value="7">7 years</option>
+<option value="8">8 years</option>
+<option value="9">9 years</option>
+<option value="10">10 years</option>
+<option value="11">11 years</option>
+<option value="12">12 years</option>
+<option value="13">13 years</option>
+<option value="14">14 years</option>
+<option value="15">15 years</option>
+<option value="16">16 years</option>
+<option value="17">17 years</option>
+<option value="18">18 years</option>
+<option value="19">19 years</option>
+<option value="20">20 years</option>
+<option value="21">20+ years</option>
+</select>
+				</div>
+			</form>

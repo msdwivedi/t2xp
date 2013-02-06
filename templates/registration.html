@@ -1,0 +1,183 @@
+<div class="indent">
+
+			<h2>Register/Upload resume</h2>
+			<form id='formId' class='zpForm' action="" enctype="multipart/form-data" method="post">
+            <div id='errOutput' class="errOutput"></div>
+            <div class="zpFormContent">
+                <fieldset>
+                    <legend>Personal information</legend>
+                    <label class="zpFormLabel">Name</label>
+            		<input name="name" value="{$name}" type="text" class="zpFormRequired zpFormRequiredError='Please\ enter\ your\ name.'" maxlength="200"/>{$name_error}
+					<br  class="clear" /> 
+                    <br  class="clear" /> 
+
+                    <label class="zpFormLabel">Current Location</label>
+            		<select name="current_location" >{foreach from=$listCurrentLocation item=cloc}{if $cloc.type=='optgroup'}<optgroup label="{$cloc.name}">{else}<option value="{$cloc.id}" {if $cloc.id==$current_location} selected="selected"{/if}>{if $cloc.name==''}--select current location--{else}{$cloc.name}{/if}</option>{/if}{if $cloc.type=='optgroup'}</optgroup>{/if}{/foreach}</select>{$current_location_error}
+					<br  class="clear" /> 
+                    <br  class="clear" /> 
+					<div class="zpFormDisplayWhen=showOtherCity">
+					<label class="zpFormLabel">Enter Other City</label>
+            		<input name="other_city"  value="{$other_city}" type="text" class="zpFormRequired zpFormRequiredError='Please\ enter\ your\ city.'" maxlength="13"/>{$other_city_error}                    
+                    </div>
+                    <div class="zpFormDisplayWhen=showMob">
+                    <label class="zpFormLabel">Mobile</label>
+            		<input name="mobile_no"  value="{$mobile_no}" type="text" class="zpFormMask='0000000000' zpFormMaskError='Please\ enter\ correct\ 10\ digit\ mobile\ number.'" maxlength="20"/>{$mobile_no_error}
+                    </div>
+            <br  class="clear" />
+            No mobile? <input type="checkbox" name="b_no_mobile" id="NoMobile" value="checked" {if $b_no_mobile=='checked'}checked="checked"{/if} />          
+           	<br  class="clear" />
+            
+            <div class="zpFormDisplayWhen=showLL">
+            <br  class="clear" />
+            <label class="zpFormLabel">Landline</label>
+            <input name="ll_phone_no" value="{$ll_phone_no}" type="text" class="zpFormMask='(+91)-0000-0000000' zpFormMaskError='Please\ enter\ correct\ landline\ number.'" maxlength="20" />{$LL_error}
+            </div>
+            </fieldset>
+           
+             <fieldset>
+                    <legend>Your Login Details</legend>
+          
+            <label class="zpFormLabel">Email</label>
+            <input name="email" value="{$email}" type="text" class="input zpFormRequired zpFormRequiredError='Please\ enter\ email\ address. zpFormEmail zpFormEmailError='Please\ enter\ a\ valid\ email\ address.' zpFormValidate='ajax/validate_candidate.php'" maxlength="255" autocomplete="off"/>{$email_error}
+            <br  class="clear" />
+            <br  class="clear" />
+            <label class="zpFormLabel">Password</label>
+            <input name="password" type="password" class="zpFormRequired zpFormRequiredError='Please\ enter\ your\ password.' zpFormMinLength=4 zpFormMaxLength=12" maxlength="200"/>{$password_error}
+            <br  class="clear" />  
+            <br  class="clear" />  
+            <label class="zpFormLabel">Confirm Password</label>
+            <input  name="re-password" type="password" class="zpFormRequired zpFormRequiredError='Please\ enter\ confirm\ password.'" maxlength="200"/>{$re-password_error}
+		</fieldset>   
+
+             <fieldset>
+                    <legend>Current Professional Details</legend>           
+
+           <label class="zpFormLabel">Total Experience</label>
+           <br  class="clear" />
+           <label class="zpFormLabel">Years</label>
+           <select name="experience_Y" id="experience_Y" class="">{foreach from=$listExpYY item=yy}<option value="{if $yy!='-select-'}{$yy}{/if}" {if $yy==$experience_Y} selected="selected"{/if}>{$yy}</option>{/foreach}</select> 
+           <span id="show_MM" style="display:none">
+           	<br  class="clear" />  
+            <br  class="clear" />
+            <label  class="zpFormLabel">Months</label>
+            
+            <select id="experience_M" name="experience_M">{foreach from=$listExpMM key=mmKey item=mm}<option value="{$mmKey}" {if $mmKey==$experience_M} selected="selected"{/if}>{$mm}</option>{/foreach}</select>{$experience_M_error}
+            
+            </span>
+            <br  class="clear" />
+            <br  class="clear" /> 
+
+            <label class="zpFormLabel">Key Skills</label>
+            <textarea name="keyskills" rows="8" cols="80" class="zpFormMinLength=20 zpFormMaxLength=255 ">{$keyskills}</textarea>{$keyskills_error}
+            <br  class="clear" /> 
+            <br  class="clear" /> 
+            
+            <label class="zpFormLabel">Resume Headline</label>
+            <input  name="resume_headline" value="{$resume_headline}" type="text" class="zpFormRequired zpFormRequiredError='Please\ enter\ your\ resume\ headline.'" maxlength="200"/>{$resume_headline_error}
+            <br  class="clear" />
+            <br  class="clear" /> 
+                          
+            <label class="zpFormLabel">Job Function</label>
+            <select name="job_function" class="">{foreach from=$listJobFunctions item=jobfunction}<option value="{$jobfunction.id}" {if $jobfunction.id==$job_function} selected="selected"{/if}>{if $jobfunction.areaname==''}--select functional area--{else}{$jobfunction.areaname}{/if}</option>{/foreach}</select>{$job_function_error}
+            <br  class="clear" /> 
+            <br  class="clear" /> 
+            <label class="zpFormLabel">Current Industry</label>
+            <select name="current_industry" class="">{foreach from=$listCurrentIndustries item=industry}<option value="{$industry.id}" {if $industry.id==$current_industry} selected="selected"{/if}>{if $industry.industryname==''}--select industry--{else}{$industry.industryname}{/if}</option>{/foreach}</select>{$current_industry_error}
+            <br  class="clear" />             
+            </fieldset>
+             
+             <fieldset>
+                    <legend>Education Details</legend> 
+          
+            <label class="zpFormLabel">Basic/Graduation</label>
+            <select name="education_basic_graduation" class="">{foreach from=$listGraduation item=grad}<option value="{$grad.id}" {if $grad.id==$education_basic_graduation} selected="selected"{/if}>{$grad.coursename}</option>{/foreach}</select>{$education_basic_graduation_error}
+            <br  class="clear" />             
+            <label class="zpFormLabel">Post Graduation</label>
+            <select name="education_pg" class="">{foreach from=$listGraduationPG item=gradPG}<option value="{$gradPG.id}" {if $gradPG.id==$education_pg} selected="selected"{/if}>{$gradPG.coursename}</option>{/foreach}</select>{$education_pg_error}
+            <br  class="clear" />  
+            <label class="zpFormLabel">Doctorate/Phd</label>
+            <select name="education_phd" class="">{foreach from=$listGraduationPHD item=gradPHD}<option value="{$gradPHD.id}" {if $gradPHD.id==$education_phd} selected="selected"{/if}>{$gradPHD.coursename}</option>{/foreach}</select>{$education_phd_error}
+            <br  class="clear" /> 
+            <label class="zpFormLabel">Certificate Course 1</label>
+            <input name="education_cirtificate1" value="{$education_cirtificate1}" type="text" class="" maxlength="100"/>
+            <br  class="clear" />
+            <label class="zpFormLabel">Certificate Course 2</label>
+            <input name="education_cirtificate2" value="{$education_cirtificate2}" type="text" class="" maxlength="100"/>
+            <br  class="clear" />
+            <label class="zpFormLabel">Certificate Course 3</label>
+            <input name="education_cirtificate3" value="{$education_cirtificate3}" type="text" class="" maxlength="100"/>
+            </fieldset>
+             <fieldset>
+                    <legend>Upload Resume</legend>                                 
+            <br  class="clear" />                                 
+            <label class="zpFormLabel">Upload resume</label>
+            <input name="document_file" type="file" class="zpFormRequired zpFormRequiredError='Please\ upload\ your\ resume\ file.' zpFormResumeFile"/>{$document_file_error}<span>Supported Formats: doc, docx, rtf. Max file size: 300 Kb</span>
+            <br  class="clear" />
+            <br  class="clear" />
+            <br  class="clear" />
+             <label class="zpFormLabel">&nbsp;</label><input type="submit" value="Upload your Resume" />            
+            </fieldset>
+			</div>
+            </form>
+            
+</div>
+<script type="text/javascript">
+function checkLL(){ 
+/*	if($('#ll_show').css('display')=='block'){
+		$('#ll_show').hide();
+		$("input[name$='mobile_no']").attr("disabled",false);
+	}
+	else{
+		$('#ll_show').show();
+		$("input[name$='mobile_no']").attr("disabled",true);
+	}*/
+	$('#NoMobile').attr('checked',!($('#NoMobile').attr('checked')));
+}
+function showLL(){
+	//alert($('#NoMobile').attr('checked'));
+	return $('#NoMobile').attr('checked');
+}
+function showMob(){
+	return !$('#NoMobile').attr('checked');
+}
+jQuery(document).ready(function() {
+	$('#experience_Y').change(function(){
+		if($('#experience_Y').val()>=0 && $('#experience_Y').val()<=5){
+			$('#show_MM').show();
+		}
+		else{
+			$('#show_MM').hide();
+			$('#experience_M').val(0);
+		}
+	
+	});
+	$('select[name="current_location"]').change(function(){
+		if($(this).find(':selected').text().indexOf('Other')!=-1){
+			alert("Other selected");
+		}
+	});
+    
+});
+function showOtherCity(){
+	return ($('select[name="current_location"]').find(':selected').text().indexOf('Other')!=-1);
+}
+Zapatec.Form.Validator.addDataType(
+	// Zapatec Name to be put in INPUT class
+	'zpFormResumeFile',
+
+	// Friendly description
+	'Resume Files',    
+
+	// Regular Expression for Validation
+	/(\.doc|\.docx|\.pdf|\.rtf|\.txt)$/,
+
+	// Error message
+	"Not a valid resume file. ",
+
+	// Help message
+	"Upload valid resume file supported formats: doc, docx, rtf. Max file size: 300 Kb",  
+
+	// Function
+	null  
+);
+</script>

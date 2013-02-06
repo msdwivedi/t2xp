@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>{$title}</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="css/reset.css" type="text/css" media="screen">
+<link rel="stylesheet" href="css/style.css" type="text/css" media="screen">
+<link rel="stylesheet" href="css/layout.css" type="text/css" media="screen">
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" media="screen">
+<script type="text/javascript" SRC="js/jquery-1.4.2.min.js" ></script>  
+<script type="text/javascript" SRC="js/imagepreloader.js"></script>
+<script type="text/javascript" SRC="js/waterDrop.jquery.js"></script>
+<script type="text/javascript" async>
+$(document).ready(function(e) {
+    $("#home").waterDrop();
+	$("#postresume").waterDrop();
+	$("#postjob").waterDrop();
+	$("#contectus").waterDrop();
+	
+});
+</script>
+<script type="text/javascript">
+	preloadImages([
+		'images/nav-tail.gif', 
+		'images/nav-right.gif', 
+		'images/nav-left.gif', 
+		'images/SearchForm-a-bg-hover.jpg', 
+		'images/checkbox-active.gif']);
+</script>   
+<script type="text/javascript" SRC="js/jquery.jqtransform.js"></script>
+{$custom_header_content}
+</head>
+<body id="page1">
+	<!-- header -->
+	<header>
+		<div class="main">
+			<div class="container">
+				<h1><a href="{$logo_link}">{$logo_text}</a></h1>
+                
+				<div class="social">
+					<a href="{$RssLink}"><img SRC="images/rss.jpg" alt="" /></a>
+					<a href="{$FbLink}"><img SRC="images/facebook.jpg" alt="" /></a>
+				</div>
+				<div class="clear"></div>
+			</div>
+            <div class="slogan" style="position:relative"><div class="sloganText">{$SlogalText}</div></div>
+			<!--#include virtual="navigation.html" -->
+			{if $bShowSearchForm}
+			<!--#include virtual="searchform.html" -->
+            {/if}
+		</div>
+	</header>
+	<!-- content -->
+	<section id="content">
+		<div class="main">
+        {$Sucess_message}{$Error_message}
+			{$PageContent}
+		</div>
+	</section>
+	<!-- footer -->
+	<!--#include virtual="footer.html" -->
+    {$custom_footer_content}
+</body>
+</html>
